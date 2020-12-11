@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Зоомагазин "Я и мои друзья"</title>
     <!-- CSS only -->
@@ -12,10 +11,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/70342240" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+        ym(70342240, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/70342240" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="img/icon.png" width="14%">
@@ -52,32 +74,33 @@
     <div class="textInLine">
         <p>Регистрация</p>
     </div>
-    <form>
+    <FORM>
+
         <div class="col-8">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                 </div>
-                <input type="text" class="form-control" placeholder="Логин" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Логин" name="Username" value=''>
             </div>
         </div>
         <div class="col-8">
             <div class="input-group mb-3">
                 <div class="input-group-prepend"></div>
-                <input type="text" class="form-control" placeholder="Телефон" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Телефон"   name="Phone" maxlength="10"  value="">
             </div>
         </div>
         <div class="col-8">
             <div class="input-group mb-3">
                 <div class="input-group-prepend"></div>
-                <input type="text" class="form-control" placeholder="Почта" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Почта"  name="Email"   value="">
             </div>
         </div>
         <div class="col-8">
             <div class="input-group mb-3">
                 <div class="input-group-prepend"></div>
-                <input type="text" class="form-control" placeholder="Пароль" aria-label="Username" aria-describedby="basic-addon1">
+                <input type="password" placeholder="Password" class="form-control"  name="Password" maxlength="10"  value="">
             </div>
-        </div>
+        </div>  
         <div class="col-8 ">
             <button type="submit" class="buttonOrder">
                 Зарегистрироваться
@@ -85,10 +108,10 @@
         </div>
         <div class=" py-3">
             <div class="alert" role="alert">
-                <h3> <strong> Уже есть аккаунт?<a href="#" class="badge badge">Авторизируйтесь</a> </strong></h3>
+                <h3> <strong> Уже есть аккаунт?<a href="#" class="badge badge" onclick="return showError() ">Авторизируйтесь</a> </strong></h3>
             </div>
         </div>
-    </form>
-</body>
-
-</html>
+    </FORM>
+    <SCRIPT src="scripts.js"></script>
+</BODY>
+</HTML>
