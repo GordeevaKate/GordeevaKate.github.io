@@ -335,7 +335,7 @@ form {
 
   .cardleft {
     position: absolute;
-    width: 300px;
+    width: 100px;
     height: 380px;
     right: 100%;
     top: 80px;
